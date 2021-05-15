@@ -57,7 +57,7 @@ jobs:
         source: "docker-compose.yaml"
         target: "yamdb"
     - name: executing remote ssh commands to deploy
-      uses: appleboy/ssh-action@masterS
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
