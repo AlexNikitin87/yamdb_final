@@ -54,7 +54,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
-        script: docker-compose run -d -rm
+        script: sudo docker-compose run -d -rm
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
