@@ -48,10 +48,17 @@ jobs:
     #needs: build_and_push_to_docker_hub
     if: github.ref == 'refs/heads/master'
     steps:
-    - name: Copy file via ssh
-      run: |
-        mkdir dc 
-        cp  docker-compose.yaml ~/dc 
+    - name: Copy file via 
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.SSH_KEY }}
+        local: docker-compose.yaml
+        remote: docker-compose.yaml
+      # run: |
+      #   mkdir dc 
+      #   cp  docker-compose.yaml ~/dc 
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
