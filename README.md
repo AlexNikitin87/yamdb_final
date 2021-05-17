@@ -25,8 +25,8 @@ API для сервиса YaMDb. Позволяет работать со сле
 
 ## Создание суперпользователя
   docker-compose exec web python manage.py shell
-  >>> from users.models import User
-  >>> User.objects.create_superuser(username='TestUser', email='admin@yamdb.fake', password='1234567')
+   from users.models import User
+   User.objects.create_superuser(username='TestUser', email='admin@yamdb.fake', password='1234567')
 
 
 ## Загрузка тестовых данных 
@@ -34,7 +34,7 @@ API для сервиса YaMDb. Позволяет работать со сле
 
 ## Бейдж
 yamdb_final
-https://github.com/AlexNikitin87/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
-
-## Деплой 
+[![Yamdb workflow](https://github.com/AlexNikitin87/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/AlexNikitin87/yamdb_final/actions/workflows/yamdb_workflow.yml)
+## Деплой
+http://84.201.176.88 
 
